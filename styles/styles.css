@@ -1,0 +1,21 @@
+td{
+    font-size: 25px;
+}
+p{
+    font-size: 20px;
+}
+.btn{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+h6{
+  text-align: right;
+}
+
+footer{
+    background-color: #212429;
+    color:  white;
+}
+h4{
+    font-size: 10px;
+}

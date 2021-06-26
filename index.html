@@ -1,0 +1,490 @@
+<!doctype html>
+<!-- Here is a link to the code the documents this code is based on
+https://getbootstrap.com/docs/5.0/getting-started/introduction/
+This will help you get started with your code!
+-->
+<!-- This code is based also on :
+    https://getbootstrap.com/docs/5.0/components/navbar/
+    https://getbootstrap.com/docs/5.0/components/scrollspy/#list-item-1
+-->
+<!-- This file contains a few elements adapted from the online tutoral -->
+<!-- on Bootstrap 4 as found here: https://www.w3schools.com/bootstrap4/default.asp -->
+<!-- as well as JQuery found here: https://www.w3schools.com/jquery/default.asp -->
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!--JQuery-->
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/excite-bike/jquery-ui.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- Your own script -->
+    <script src="scripts/service.js"></script>
+    <link href="styles/styles.css" rel="stylesheet" type="text/css">
+    <link href="styles/jquery-ui-1.9.2.custom.css" rel="stylesheet" type="text/css">
+    <title>Module 6 Lab</title>
+</head>
+
+<body>
+<!--
+I store all of the page information in a container,
+Many websites will use what is called CSS grid layouts, where you will have a header, body, footer and both sides used for ads or other information
+-->
+<div class = "container-lg">
+
+    <!--
+    Most websites now feature what is called a NavBar.
+    The example I give is quite simple with a logo and some text, but you can use it for many navigational patterns
+    https://getbootstrap.com/docs/5.0/components/navbar/
+    -->
+    <nav class="navbar bg-dark text-white p-3 my-3 ">
+        <h1><img src="images/company_logo.png" width="130" height="130"> Welcome to the Annuit Cœptis Clinic</h1>
+    </nav>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Menu</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#AboutUs"><img src="images/aboutus.png" alt="logo" style="width:40px;">ABOUT US</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="images/services.png" alt="logo" style="width:40px;">
+                            SERVICES
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#AquaticTherapy">Aquatic Therapy</a></li>
+                            <li><a class="dropdown-item" href="#JointManipulationsandMobilizations">Joint Manipulations and Mobilizations</a></li>
+                            <li><a class="dropdown-item" href="#LaserTherapy">Laser Therapy</a></li>
+                            <li><a class="dropdown-item" href="#ShockwaveTherapy">Shockwave Therapy</a></li>
+                            <li><a class="dropdown-item" href="#UltrasoundTherapy">Ultrasound Therapy</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Reservation"><img src="images/reservation.png" alt="logo" style="width:40px;">MAKE A RESERVATION</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Physicians"><img src="images/Experts.png" alt="logo" style="width:40px;">OUR PHYSICIANS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Information"><img src="images/information.png" alt="logo" style="width:40px;">MORE INFORMATION</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <br>
+
+
+    <div class=" p-3 my-3 border bg-light">
+        <div data-bs-spy="scroll" data-bs-target="#AboutUs" data-bs-offset="" class="scrollspy-example" tabindex="0">
+            <h4 id="AboutUs"></h4>
+        </div>
+        <h1 class="About us"> About us</h1>
+        <p class="p-4 my-3" style="font-size: 25px">We are the only clinic in Canada offering Aquatic Therapy in our indoor pool</p>
+        <p style="font-size: 25px; padding-left: 1.5rem">We are dedicated to providing <strong>cutting edge</strong> care to our customers</p>
+        <br>
+        <p style="font-size: 25px; padding-left: 1.5rem">Come visit us : 1234 Hot Dog street, Ottawa, ON</p>
+
+    </div>
+    <br>
+
+    <!--
+    Tables are one of many ways to organize information easily.
+    It is a good way to list of prices, or services in a business website
+    https://getbootstrap.com/docs/5.0/content/tables/
+    -->
+
+    <table class="table table-info table-hover">
+        <thead>
+            <tr>
+                <th scope="col"><h2>Service</h2></th>
+                <th scope="col"><h2>Description</h2></th>
+                <th scope="col"><h2>Price</h2></th>
+            </tr>
+        </thead>
+        <tbody>
+            <div data-bs-spy="scroll" data-bs-target="#Service" data-bs-offset="" class="scrollspy-example" tabindex="0">
+                    <h4 id="AquaticTherapy"></h4>
+            </div>
+            <tr>
+                <td>Aquatic Therapy</td>
+                <td>The gravity-defying effects of aquatic therapy and resistance that the water provides makes it uniquely helpful to several types of patients. It is particularly beneficial to patients with joint pain, extreme obesity, or other mobility-limiting factors.</td>
+                <td>99$/h</td>
+            </tr>
+            <div data-bs-spy="scroll" data-bs-target="#Service" data-bs-offset="" class="scrollspy-example" tabindex="0">
+                    <h4 id="JointManipulationsandMobilizations"></h4>
+            </div>
+            <tr>
+                <td>Joint Manipulations and Mobilizations</td>
+                <td>Uses a hands on approach to get stiff or immobile joints moving.</td>
+                <td>49$/h</td>
+            </tr>
+            <div data-bs-spy="scroll" data-bs-target="#Service" data-bs-offset="" class="scrollspy-example" tabindex="0">
+                    <h4 id="LaserTherapy"></h4>
+            </div>
+            <tr>
+                <td>Laser Therapy</td>
+                <td>Low level laser therapy has anti-inflammatory and pain relieving effects.</td>
+                <td>69$/h</td>
+            </tr>
+            <div data-bs-spy="scroll" data-bs-target="#Service" data-bs-offset="" class="scrollspy-example" tabindex="0">
+                    <h4 id="ShockwaveTherapy"></h4>
+            </div>
+            <tr>
+                <td>Shockwave Therapy</td>
+                <td>Extracorporeal Shockwave Therapy (Shockwave) uses an “abrupt, high amplitude pulse of mechanical energy, similar to soundwaves”12 to treat a variety of conditions. This technique provides improved pain relief and function.</td>
+                <td>59$/h</td>
+            </tr>
+            <div data-bs-spy="scroll" data-bs-target="#Service" data-bs-offset="" class="scrollspy-example" tabindex="0">
+                    <h4 id="UltrasoundTherapy"></h4>
+            </div>
+            <tr>
+                <td>Ultrasound Therapy</td>
+                <td>This treatment increases circulation, tissue metabolism, tissue flexibility and healing and is frequently used for its effects on muscles, joints and ligaments.</td>
+                <td>89$/h</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- Alerts are an easy way to grab the users attention, this page goes into more detail
+    https://getbootstrap.com/docs/5.0/components/alerts/
+    -->
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Not sure which treatment to pick?</strong> Call one of our certified physiotherapist :  <strong>672-889-9376</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    <!-- Button trigger modal
+    We use the same button code from above, but now we can trigger a modal to appear.
+    The bootstrap tutorial includes many different types of modals that you can explore
+    https://getbootstrap.com/docs/5.0/components/modal/
+    -->
+    <br>
+    <div data-bs-spy="scroll" data-bs-target="#Service" data-bs-offset="" class="scrollspy-example" tabindex="0">
+            <h4 id="Reservation"></h4>
+    </div>
+    <div class="col text-center">
+        <button type="button" class="btn btn-primary btn-lg btn-block" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        MAKE A RESERVATION 
+        </button>
+    </div>
+    <br>
+    <br>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">MAKE A RESERVATION</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <strong>Due to high demand, only one service can be selected per reservation.</strong>
+                    <br>
+                    <br>
+                    Which service would you like to select?
+                    <br>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="service" id="option1" autocomplete="off"> Aquatic Therapy
+                        </label>
+                    </div>
+                    <br>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="service" id="option1" autocomplete="off"> Joint Manipulations and Mobilizations
+                        </label>
+                    </div>
+                    <br>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="service" id="option1" autocomplete="off"> Laser Therapy
+                        </label>
+                    </div>
+                    <br>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="service" id="option1" autocomplete="off"> Shockwave Therapy
+                        </label>
+                    </div>
+                    <br>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="service" id="option1" autocomplete="off"> Ultrasound Therapy
+                        </label>
+                    </div>
+                </div>
+                <div class="modal-body doctor">
+                    Which physician would you like to select?
+                    <br>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="service" id="Bob" autocomplete="off"> Dr. Bob Dylan
+                        </label>
+                    </div>
+                    <h4> * Not available on Wednesdays </h4>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="service" id="Snoop" autocomplete="off"> Dr. Snoop Dog
+                        </label>
+                    </div>
+                    <h4> * Not available on Tuesdays </h4>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="service" id="Donald" autocomplete="off"> Dr. Donald Trump
+                        </label>
+                    </div>
+                    <h4> * Not available on Mondays </h4>
+                </div>
+                <div class="modal-body dropdown">
+                    <label for="dateInput">Select a Date :</label>
+                    <br>
+                    <input type="text" id="dateInput">
+                </div>
+                <div class="modal-body dropdown">
+                    Select a time of day :
+                    <br>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary active">
+                            <input type="radio" name="timeOfDay" id="option1" autocomplete="off"> 08:00AM - 09:00AM
+                        </label>
+                    </div>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary active">
+                            <input type="radio" name="timeOfDay" id="option1" autocomplete="off"> 09:00AM - 10:00AM
+                        </label>
+                    </div>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary active">
+                            <input type="radio" name="timeOfDay" id="option1" autocomplete="off"> 10:00AM - 11:00AM
+                        </label>
+                    </div>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary active">
+                            <input type="radio" name="timeOfDay" id="option1" autocomplete="off"> 11:00AM - 12:00PM
+                        </label>
+                    </div>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary active">
+                            <input type="radio" name="timeOfDay" id="option1" autocomplete="off"> 12:00PM - 01:00PM
+                        </label>
+                    </div>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary active">
+                            <input type="radio" name="timeOfDay" id="option1" autocomplete="off">  01:00PM - 02:00PM
+                        </label>
+                    </div>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary active">
+                            <input type="radio" name="timeOfDay" id="option1" autocomplete="off">  02:00PM - 03:00PM
+                        </label>
+                    </div>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary active">
+                            <input type="radio" name="timeOfDay" id="option1" autocomplete="off">  03:00PM - 04:00PM
+                        </label>
+                    </div>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary active">
+                            <input type="radio" name="timeOfDay" id="option1" autocomplete="off">  04:00PM - 05:00PM
+                        </label>
+                    </div>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary active">
+                            <input type="radio" name="timeOfDay" id="option1" autocomplete="off">  05:00PM - 06:00PM
+                        </label>
+                    </div>
+                </div>
+                <div class="modal-body dropdown">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email Address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="johndoe@domain.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Phone Number</label>
+                            <br>
+                            <input type="text" id="phone" placeholder="(123) 222-3333">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">First Name</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="John">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Last Name</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="1234 Emia road">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">City</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ottawa">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Province</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ontario">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Postal Code</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="K8L 4J9">
+                        </div>
+                        <div>
+                            <img src="images/credit.png" alt="logo" style="width:20px;">
+                            <label for="exampleInputEmail1">Credit Card Number</label>
+                            <br>
+                            <input type="text" id="credit" title="We ask for your credit card number in case of no-show, 20$ will be charged." placeholder="1234 5678 9123 4567">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Expiry Date</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="09/25">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">3-digit code</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="XXX">
+                            <small id="emailHelp" class="form-text text-muted">Your personal information is secured and will not be shared to third parties.</small>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Remember Me?</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr/>
+    <br>
+
+    <!-- Cards are quite useful when building a website. They are a useful way to organize information.
+    They can be organized using a CSS grid or other layout options.
+    https://getbootstrap.com/docs/5.0/components/card/
+    -->
+    <div id="id">
+        <div data-bs-spy="scroll" data-bs-target="#Service" data-bs-offset="" class="scrollspy-example" tabindex="0">
+            <h4 id="Physicians"></h4>
+        </div>
+    <h1>Meet the Physicians!</h1>
+    <br>
+    <div class="row justify-content-around">
+        <div class="card" style="width: 18rem;">
+            <br>
+            <img src="images/BobDylan.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">Dr. Bob Dylan is a certified physiotherapist from the University of Nashville with a specialization in Laser Therapy, Shockwave Therapy and Ultrasound Therapy. He has over 30 years of experience in the field. </p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <br>
+            <img src="images/SnoopDog.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">Dr. Snoop Dog is known as the Snoopzilla of physiotherapy. He has over 20 years of experience with a wide variety of physiotherapeutic treatments and likes to combine physical therapy with  natural medication.</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <br>
+            <img src="images/Trump.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">Dr. Donald Trump is very talented with his hands. He has specialized in Joint Manipulations and Mobilizations Therapy at the University of China. His touch will make your body great again.</p>
+                <small id="emailHelp" class="form-text text-muted">This is not fake news</small>
+            </div>
+        </div>
+    </div>
+</div>
+    <br>
+    <br>
+    <hr/>
+    <br>
+    <div data-bs-spy="scroll" data-bs-target="#Service" data-bs-offset="" class="scrollspy-example" tabindex="0">
+            <h4 id="Information"></h4>
+    </div>
+    <!--
+    We can also use buttons to expand some hidden options
+    https://getbootstrap.com/docs/5.0/components/collapse/
+    -->
+    <h1>More Information</h1>
+
+    <!-- This example is using what is called an accordian, this is one of three examples
+    https://getbootstrap.com/docs/5.0/components/accordion/
+    -->
+
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    Can therapy help me cure COVID-19?
+                </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                Yes, all of our therapy services will cure and prevent COVID-19 infections.
+                <br>
+                <br>
+                <small><strong>False Information Warning</strong></small>
+                <br>
+                <small>This information has been flagged as <strong>false information</strong> by independent fact-checkers.</small>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    Can my dog receive therapy?
+                </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">No. Unfortunately, your dog would <strong>implode (1)</strong>.
+                    <br>
+                    <br>
+                    <strong><small> (1) imploding is bad </small></strong>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    Can I drive to my appointment?
+                </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">No, our parking lot has a strict no-car policy. Clients may only arrive using a tricycle or unicycle.
+                    <br>
+                    <br>
+                    <small><strong> Violators of this policy will be prosecuted to the fullest extend of the law </strong></small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<br>
+<!-- here we input our javascript helper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+<footer>
+    <div>
+        <br>
+        <h6>Site created by Marc Tremblay   |</h6>
+        <br>
+    </div>
+</footer>
+
+</html>
